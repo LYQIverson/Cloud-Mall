@@ -1,0 +1,14 @@
+server:
+  port: 8103
+spring:
+  application:
+    name: eureka-client
+eureka:
+  instance:
+    hostname: security
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+#配置文件中需要修改注册中心地址格式:http://${username}:${password}@${hostname}:${port}/eureka/
+      defaultZone: http://admin:123456@localhost:8004/eureka/
